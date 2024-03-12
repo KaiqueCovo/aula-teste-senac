@@ -22,22 +22,11 @@ app.get("/usuarios", (req, res) => {
 app.post("/usuarios", (req, res) => {
   const user = req.body;
 
-
   users.push(user);
-
 
   res.json(user);
 })
 
-// Criando uma rota para criar um novo usuário
-app.delete("/usuarios", (req, res) => {
-  const user = req.body;
-
-  users.push(user);
-
-
-  res.json(user);
-})
 
 app.listen(3000, () => {
   console.log("API is running on port 3000");
